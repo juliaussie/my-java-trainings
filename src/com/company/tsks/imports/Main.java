@@ -1,15 +1,21 @@
 package com.company.tsks.imports;
 
-import java.util.Date;
-
 public class Main {
     public static void main(String[] args) {
-        showCurrentDate();
+        System.out.println(isPalindrome("xanax"));
     }
 
-    public static void showCurrentDate()  {
-	// write your code here
-        System.out.println("npиBeT, сегодня: ");
-        System.out.println(new Date());
+    public static boolean isPalindrome(String word) {
+        int i = 0;
+        int j = word.length() - 1;
+        while (i<j) {
+            if (word.charAt(i) != word.charAt(j))
+                return false;
+            i ++;
+            j --;
+        }
+        return true;
+
+
     }
 }
